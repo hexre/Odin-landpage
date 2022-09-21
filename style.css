@@ -35,7 +35,7 @@ nav li:hover{
 }
 nav a{
     text-decoration-line: none;
-    color: black;
+    color: #000;
     text-transform: uppercase;
 }
 nav a:hover{
