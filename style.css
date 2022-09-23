@@ -1,13 +1,27 @@
+
+*{
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+
 body{
     margin: 0;
-    background-image: url(/images/RR-bg.webp);
+    background-color:#dcdcdc;
+    font-family: "Roboto", sans-serif;
 }
 .container{
     margin: 0 auto;
     width: 80%;
 }
+/*================================================================================
+            Header Section
+=================================================================================*/
 header{
-    background: skyblue;
+    background: white;
+    width: 100%;
+    top: 0;
 }
 header::after{
     content: '';
@@ -15,19 +29,27 @@ header::after{
     clear: both;
 }
 .logo{
-    height: 50px;
+    height: 10px;
     float: left;
-    margin-top: 0.5%;
+    text-transform: uppercase;
+    margin-top: 2%;
 }
 nav{
     float: right;
+    display:flex;
+    justify-content: space-around;
 }
-nav li{
+
+ul{
+    flex-flow: row wrap;
+}
+
+li{
     list-style: none;
-    margin-left: 70px;
     display: inline-block;
-    margin: 15px;
-    position: relative;
+    margin: 5px;
+    border-left: 2px solid grey;
+    padding-left: 25px;
 }
 nav li:hover{
     
@@ -39,20 +61,44 @@ nav a{
     text-transform: uppercase;
 }
 nav a:hover{
-    color: #000;
+    color: grey;
 }
 nav a::before{
     content: '';
     display: block;
-    background-color: #444;
+    background-color: grey;
 
-    height: 5px;
+    height: 3px;
     width: 0%;
+    max-width: 70px;
     margin-top: 40px;
-    transition:ease-in-out 250ms;
+    transition:ease-in-out 100ms;
     position: absolute;
 
 }
 nav a:hover::before{
     width: 100%;
+}
+/*================================================================================
+    About Section
+===============================================================================*/
+#about{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 90px 0rem 10rem;
+    gap: 2rem;
+}
+#about-text{
+    max-width: 40%;
+    font-size: 15px;
+}
+#about-text h1{
+    font-size: 3rem;
+    max-width: 100%;
+}
+#about-text p{
+    font-size: 18px;
+    margin-bottom: 1rem;
+    color:black;
 }
