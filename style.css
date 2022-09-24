@@ -15,13 +15,14 @@ body{
     margin: 0 auto;
     width: 80%;
 }
+main{
+}
 /*================================================================================
             Header Section
 =================================================================================*/
 header{
     background: white;
-    width: 100%;
-    top: 0;
+    
 }
 header::after{
     content: '';
@@ -29,15 +30,27 @@ header::after{
     clear: both;
 }
 .logo{
-    height: 10px;
+    height: auto;
     float: left;
     text-transform: uppercase;
-    margin-top: 2%;
+    margin:auto -140px 40px;
+    padding:20px 150px 22px;
+    position: fixed;
+    top:0;;
+    background-color: white;
+
 }
 nav{
     float: right;
     display:flex;
     justify-content: space-around;
+    
+    position:fixed;
+    width: 100%;
+    top: 0;
+    background-color: white;
+    margin-left: 20%;
+    
 }
 
 ul{
@@ -48,17 +61,20 @@ li{
     list-style: none;
     display: inline-block;
     margin: 5px;
-    border-left: 2px solid grey;
-    padding-left: 25px;
+    border-left: 1px double grey;
+    padding-left: 15px;
+    
+    position: relative;
 }
 nav li:hover{
     
-    transform:translateY(-4px)
+    transform:translateY(-3px)
 }
 nav a{
     text-decoration-line: none;
     color: black;
     text-transform: uppercase;
+    padding: 15px;
 }
 nav a:hover{
     color: grey;
@@ -66,13 +82,13 @@ nav a:hover{
 nav a::before{
     content: '';
     display: block;
-    background-color: grey;
+    background-color: black;
 
     height: 3px;
     width: 0%;
-    max-width: 70px;
-    margin-top: 40px;
-    transition:ease-in-out 100ms;
+    max-width: 100%;
+    margin:21px auto;
+    transition:ease 200ms;
     position: absolute;
 
 }
@@ -88,6 +104,10 @@ nav a:hover::before{
     justify-content: center;
     padding: 90px 0rem 10rem;
     gap: 2rem;
+    border-top: 63px solid black;
+    width:100%;
+    margin: auto;
+
 }
 #about-text{
     max-width: 40%;
@@ -105,3 +125,10 @@ nav a:hover::before{
 /*============================================
     Testimonies Section
 ================================================*/
+#testimonials{
+    background-color: #dcdcdc;
+    padding: 90px 0;
+}
+#testimonials-container{
+    display: flex;
+}
